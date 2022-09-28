@@ -9,6 +9,11 @@ html{
     color: white;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 /* header */
 header{
     height: 50px;
@@ -19,20 +24,51 @@ header{
     display: flex;
     height: 100%;
     justify-content: flex-end;
-    align-items:center;
+    align-items:baseline;
+}
+
+.cell, .maximize{
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 15px;
+    font-weight: 300;
+    padding: 0.3rem;
+    margin: 0.5em;
+    border-radius: 5px;
 }
 
 /* main */
+
 main{
-    color: black;
+    background-color: black;
+}
+
+.container{
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 0.5rem 0;
     height: calc(100vh - 50px - 100px);
     overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    row-gap: 1rem;
+    column-gap: 0.3rem;
+}
+
+.card{
+    flex-basis: calc(100% / 7 - 1.8rem / 7);   
+    height: 140px;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
 }
 
 /* footer */
 footer{
     height: 100px;
-    background-color: grey;
+    background-color: rgb(34, 34, 34);
 
 }
 
@@ -41,8 +77,22 @@ footer{
     height: 100%;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
 }
 
 .btn{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+    padding: 0 0.8rem;
+}
+
+.icon{
+    font-size: 30px;
 }
